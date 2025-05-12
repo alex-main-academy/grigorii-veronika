@@ -161,6 +161,18 @@ canvas {
   text-align: center;
   margin-bottom: 40px;
 }
+.location-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #63584f;
+}
+
+.location-subtitle__last {
+  margin-top: 50px;
+}
 .location-text {
   font-family: 'Playfair Display', serif;
   font-optical-sizing: auto;
@@ -311,16 +323,16 @@ canvas {
   height: 35px;
 }
 .dresscode-item:nth-child(1) {
-  background-color: #f7e6ec;
+  background-color: #909b71;
 }
 .dresscode-item:nth-child(2) {
-  background-color: #faa5a0;
+  background-color: #f9d59b;
 }
 .dresscode-item:nth-child(3) {
   background-color: #e85e75;
 }
 .dresscode-item:nth-child(4) {
-  background-color: #db6192;
+  background-color: #f6c8b8;
 }
 
 .details {
@@ -447,6 +459,26 @@ canvas {
   border: 2px solid #514940;
   border-radius: 4px;
   background-color: #514940;
+}
+
+.registration-number {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  color: #514940;
+  text-underline-offset: 4px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.registration-number--name {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  color: #514940;
+  margin-bottom: 40px;
 }
 
 .bottom-foto-thumb {
@@ -625,4 +657,49 @@ canvas {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.music {
+  background-color: #faf6f3;
+  padding-top: 50px;
+}
+
+.music-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.music-text-left {
+  font-family: 'Anticva';
+  font-size: 20px;
+  color: #c0924f;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.music-button {
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #c0924f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-play__first {
+  transform: translateX(2px);
+}
+
+.music-text-right {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #c0924f;
+  text-align: center;
+  text-transform: uppercase;
 }

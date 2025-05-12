@@ -17,14 +17,14 @@ $count = $_POST['count'];
 $presence = isset($_POST['presence']) ? $_POST['presence'] : ''; // Получаем выбранное значение радио-кнопки
 
 // URL вашего Google Apps Script
-$scriptUrl = 'https://script.google.com/macros/s/AKfycbyVK6KdxZqT0Dy_Gp4cpBzP7EcTzALrSngvU1TBf02LAEnzpMFCUcP7iCCudveLJw/exec';
+$scriptUrl = 'https://script.google.com/macros/s/AKfycbyEWXoOREZl99g_C4J1LEXWWJ56WndQdpwpQzvIUX24gT5miDoYYMy2ZeupFOZKDoSs/exec';
 
 // Подготовка данных для отправки
 $data = array(
-    'name' => $name,
-    'count' => $count,
-    'presence' => $presence,
-    'date' => date('Y-m-d H:i:s')
+    'имя' => $name,
+    'кол-во' => $count,
+    'присутствие' => $presence,
+    'дата' => date('Y-m-d H:i:s')
 );
 
 // Инициализация cURL для отправки данных
@@ -42,7 +42,7 @@ $response = file_get_contents($scriptUrl, false, $context);
 $responseData = json_decode($response, true);
 
 if ($responseData['result'] == 'success') {
-    header('Location: thanks.html');
+    header('Location: https://t.me/+VFkjXIVTgao1N2Uy');
     exit();
 } else {
     echo 'Произошла ошибка: ' . $responseData['error'];
