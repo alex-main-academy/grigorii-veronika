@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   playButton.addEventListener('click', function () {
     document.querySelector('.music-play').setAttribute('src', 'img/icons/pause.svg');
-    document.querySelector('.music-play').classList.remove('music-play__first');
     audio.play();
   });
 });

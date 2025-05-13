@@ -3,6 +3,36 @@ AOS.init({
   once: true
 });
 
+// work with form
+const form = document.querySelector('.js-form');
+const submitButton = document.getElementById('submitBtn');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  submitButton.disabled = true;
+  submitButton.innerText = 'Отправка...';
+
+  const scriptURL =
+    'https://script.google.com/macros/s/AKfycbyEWXoOREZl99g_C4J1LEXWWJ56WndQdpwpQzvIUX24gT5miDoYYMy2ZeupFOZKDoSs/exec';
+
+  const dataTime = `${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`;
+  document.querySelector('.js-form-date').value = dataTime;
+
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then((response) => {
+      console.log('Success!', response);
+      submitButton.disabled = false;
+      submitButton.innerText = 'Отправить';
+
+      form.reset();
+      window.location.href = 'https://t.me/+VFkjXIVTgao1N2Uy';
+    })
+    .catch((error) => {
+      console.error('Error!', error.message);
+    });
+});
+
 document.getElementById('form').addEventListener('submit', function (event) {
   var submitButton = document.getElementById('submitBtn');
 
