@@ -12,7 +12,7 @@
       property="og:description"
       content="Дорогие родные и близкие! Приглашаем вас разделить радость особенного для нас события и стать частью начала нашей семейной истории!"
     />
-    <meta property="og:image" content="https://prima-invitation.com/grigoriy-veronika/img/fb_img.jpg" />
+    <meta property="og:image" content="https://grigorii-veronika.vercel.app/img/fb_img.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="628" />
     <meta property="og:site_name" content="wedding" />
@@ -202,27 +202,27 @@
 
           <form id="form" class="registration-form js-form" enctype="multipart/form-data">
             <div class="form-field">
-              <input class="form-input" type="text" name="name" placeholder="Имя, фамилия" required />
+              <input class="form-input" type="text" name="имя" placeholder="Имя, фамилия" required />
             </div>
             <div class="form-field">
-              <input class="form-input" type="number" name="count" placeholder="Количество людей" required />
+              <input class="form-input" type="number" name="кол-во" placeholder="Количество людей" required />
             </div>
 
             <label class="checkbox-label">
-              <input class="checkbox-input visually-hidden" type="radio" name="presence" value="yes" required />
+              <input class="checkbox-input visually-hidden" type="radio" name="присутствие" value="да" required />
               <span class="custom-checkbox">
                 <span class="checkbox-icon"></span>
               </span>
               Я смогу прийти
             </label>
             <label class="checkbox-label">
-              <input class="checkbox-input visually-hidden" type="radio" name="presence" value="no" required />
+              <input class="checkbox-input visually-hidden" type="radio" name="присутствие" value="нет" required />
               <span class="custom-checkbox">
                 <span class="checkbox-icon"></span>
               </span>
               Я не смогу прийти
             </label>
-
+            <input type="hidden" class="js-form-date" name="дата" />
             <div>
               <button id="submitBtn" class="registration-btn" data-aos="zoom-in" data-aos-duration="1100" type="submit">
                 Отправить
@@ -231,7 +231,7 @@
           </form>
 
           <p class="registration-text">По всем вопросам можно обращаться по номеру телефона:</p>
-          <a href="tel:89537999144" class="registration-number">89537999144</a>
+          <a href="tel:+79537999144" class="registration-number">89537999144</a>
           <small class="registration-number--name">(Григорий)</small>
         </section>
       </div>
